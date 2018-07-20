@@ -2,7 +2,7 @@ class CMatchLobby
 {
 	/* 	Match Lobby attributes 
 		----------------------------------------------------------------------------------- */
-		id			= null;
+		id		= null;
 		world		= 0;
 		players		= [];
 		countdown	= null;
@@ -22,22 +22,22 @@ class CMatchLobby
 			this.world 	= p1.pInstance.ID + 1;
 			
 			// Set the pre-match values
-			p1.pInstance.World 		= this.world;
+			p1.pInstance.World 	= this.world;
 			p1.pInstance.Health 	= 100;
 			p1.pInstance.CanAttack 	= false;
-			p1.isReady				= false;
+			p1.isReady		= false;
 			
-			p2.pInstance.World 		= this.world;
+			p2.pInstance.World 	= this.world;
 			p2.pInstance.Health 	= 100;
 			p2.pInstance.CanAttack 	= false;
-			p2.isReady				= false;
+			p2.isReady		= false;
 			
 			// Assign the participants
 			this.players.push( p1 );
 			this.players.push( p2 );
 			
 			// The match aint started yet
-			this.hasStarted			= false;
+			this.hasStarted		= false;
 			
 			// Start a 30 second timer to force start a match incase one of the players is AFK
 			this.countdown = ::NewTimer( "ForceMatch", 30000, 1, this.id );
