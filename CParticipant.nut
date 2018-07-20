@@ -29,7 +29,7 @@ class CParticipant
 			this.pInstance 		= player;
 			
 			// Set default values
-			this.points			= 0;
+			this.points		= 0;
 			this.duelsWon		= 0;
 			this.duelsLost		= 0;
 			
@@ -37,7 +37,7 @@ class CParticipant
 			this.SetDivision( BOTTOM_DIVISION );
 			
 			// Set the player state to idle until he/she spawns
-			this.state			= PlayerState.IDLE;
+			this.state		= PlayerState.IDLE;
 			this.pendingMatches	= [];
 		}
 	
@@ -64,12 +64,12 @@ class CParticipant
 			
 			// 	We will search for an opponent in the following divisions, ordered by priority:
 			local searchDivisions = 	[ 	
-											this.division, 
-											this.division - 1,
-											this.division + 1,
-											this.division - 2,
-											this.division + 2
-										];
+								this.division, 
+								this.division - 1,
+								this.division + 1,
+								this.division - 2,
+								this.division + 2
+							];
 			//	Note that some of this divisions might not exist if the player is in top 2 or bottom 2 divisions. CODE FuckYou
 			
 			local index = 0;
