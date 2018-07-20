@@ -2,9 +2,9 @@ const BOTTOM_DIVISION	= 9;	// The lowest division where the players start. 0-9, 
 
 enum PlayerState
 {
-	IDLE,			// Player is in spawn screen, idle.
+	IDLE,		// Player is in spawn screen, idle.
 	MATCHMAKING,	// Player is waiting for match making, no valid opponent found yet.
-	PLAYING			// Player is currently participating in a duel. 
+	PLAYING		// Player is currently participating in a duel. 
 }
 
 /* Global table to store all connected players.
